@@ -1,8 +1,9 @@
-import Card from './Card';
+import Card from '../Card/Card';
+import style from './Cards.module.css';
 
 function Cards({characters}) { // acá van las props que se le pasan en App.js
    return (
-   <div>
+   <div className={style.cards}>
       {characters.map(({name, status, species, gender, origin, image}) => {
          return (<Card 
             name = {name} // cada una de estas son las props que se le pasa a cada card, están en el módulo Card
