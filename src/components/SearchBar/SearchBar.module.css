@@ -1,0 +1,13 @@
+.addButton{
+    background-color: rgba(0, 0, 0, 0.385);
+    border: 0px;
+    border-radius: 7px;
+    /* width: 15%; */
+    /* height: 6%; */
+    width: auto;
+    height: auto;
+    color: rgb(181, 181, 207);
+    font-size: 15px;
+    margin-inline: 0.3%;
+    margin-block: 0.3%;
+}

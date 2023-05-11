@@ -1,3 +1,9 @@
 .cards{
-    display:flex
+    background-color: rgba(0, 0, 0, 0.127);
+    display:flex;   
+    position:relative;
+    margin:auto;
+    margin-top: 1%;
+    width: 65%;
+    padding: 1%;
 }

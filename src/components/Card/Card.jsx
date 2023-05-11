@@ -3,13 +3,13 @@ import style from './Card.module.css';
 function Card({name, status, species, gender, origin, image, onClose}) {  // estas props vienen de App.js, se le pasan como props a la etiqueta Card, es mejor extraerlas del objeto con {} acá adentro, es más práctico
    return (
       <div className={style.card}>
-         <h1>{name}</h1> 
          <img src={image} alt='' />
+         <h1>{name}</h1> 
          <h2>{status}</h2>
          <h2>{species}</h2>
          <h2>{gender}</h2>
          <h2>{origin.name}</h2>
-         <button onClick={onClose}>X</button>
+         <button className={style.closeButton} onClick={onClose}>CLOSE</button>
       </div>
    );
 }
