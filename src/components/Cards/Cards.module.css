@@ -4,11 +4,12 @@
     flex-direction: row;   
     position:relative;
     margin:auto;
-    margin-top: 1%;
+    /* margin-top: 1%; */
     width: 65%;
     padding: 1%;
     /* justify-content: space-between; */
 }
 
 
-/* palettes.shecodes.io/palletes */
+/* https://palettes.shecodes.io/ */
+/* https://coolors.co/ */
