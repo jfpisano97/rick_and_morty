@@ -1,18 +1,23 @@
 .card{
-    background-color: rgba(0, 0, 0, 0.144);
+    background-color: rgba(0, 0, 0, 0.086);
     margin-inline: 1%;
     margin-block: 1%;
     border-radius: 12px;
     padding-bottom: 1%;
     height: auto;
-    width: auto;
-    /* display:flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
+    width: fit-content;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     /* justify-content: center; */
+    transition: 0.5s;
 }
 
-h1{
+.card:hover{
+    background-color: rgba(0, 0, 0, 0.198);
+}
+
+h1{ 
     font-size: 20px;
     color:rgb(24, 22, 49);
     /* margin-top: -15%; */
@@ -28,16 +33,18 @@ h2{
     /* max-width: 180px; */
     /* width: auto;  */
     width: 100%;
-    border-radius: 12px;
+    border-radius: 12px 12px 0px 0px;
   }
 
-.card .closeButton{
+.closeButton{
     background-color: rgba(0, 0, 0, 0.385);
     border: 0px;
     border-radius: 4px;
     /* width: 15%; */
     /* height: 6%; */
-    width: auto;
+    /* width: fit-content; */
+    /* height: fit-content; */
+    width:fit-content;
     height: auto;
     color: rgb(181, 181, 207);
     font-size: 9px;
