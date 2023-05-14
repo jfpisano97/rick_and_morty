@@ -1,18 +1,19 @@
 import Card from '../Card/Card';
 import style from './Cards.module.css';
 
-function Cards({characters}) { // acá van las props que se le pasan en App.js
+function Cards(props) { // acá van las props que se le pasan en App.js
    return (
    <div className={style.cards}>
-      {characters.map(({name, status, species, gender, origin, image}) => {
+      {props.characters.map(({id, name, status, species, gender, origin, image}) => {
          return (<Card 
+            id = {id}
             name = {name} // cada una de estas son las props que se le pasa a cada card, están en el módulo Card
             status = {status}
             species = {species}
             gender = {gender}
             origin = {origin}
             image = {image}
-            onClose = {() => window.alert('Emulamos que se cierra la card')}
+            onClose = {props.onClose}
          /> )
       })}
    </div>

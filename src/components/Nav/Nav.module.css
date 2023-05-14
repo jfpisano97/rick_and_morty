@@ -1,0 +1,16 @@
+.nav{
+    background-color: #be3144;
+    padding: 6px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.logo{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    color: #d3d6db;
+    font-family: fantasy;
+}

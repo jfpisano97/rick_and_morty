@@ -1,13 +1,22 @@
 import style from './SearchBar.module.css';
+import {useState} from 'react';
 
-export default function SearchBar(props) {  // la función onSearch está en props, se pasa por props en App.js, entonces si la quiero usar tengo que hacer props.onSearch
+function SearchBar(props) {  // la función onSearch está en props, se pasa por props en App.js, entonces si la quiero usar tengo que hacer props.onSearch
+   
+   const [id, setId] = useState('');
+
+   function handleChange(event){
+      return setId(event.target.value)
+   }
+   
    return (
-      <div className={style.bar}>
-         <div className={style.logo}>Ricardo Mort</div>
          <div className={style.search}>
-            <input className ={style.input} type='search' /> 
-            <button className={style.addButton} onClick={(id) => {props.onSearch(id)}}>Add</button> 
+            <input className ={style.input} type='search' onChange={handleChange} /> 
+            <button className={style.addButton} onClick={()=>{props.onSearch(id)}}>Add</button> 
          </div>
-      </div>
    );
+
+
 }
+
+export default SearchBar;
