@@ -1,4 +1,4 @@
-import Card from '../Card/Card';
+import Card from '../../components/Card/Card';
 import style from './Cards.module.css';
 
 function Cards(props) { // acá van las props que se le pasan en App.js

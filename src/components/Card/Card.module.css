@@ -1,38 +1,33 @@
 .card{
-    background-color: rgba(0, 0, 0, 0.086);
-    margin-inline: 1%;
-    margin-block: 1%;
+    background-color: #135ba33e;
+    margin-inline: 8px;
+    margin-block: 8px;
     border-radius: 12px;
-    padding-bottom: 1%;
+    padding-bottom: 8px;
     height: auto;
     width: fit-content;
+    /* height: 400px;
+    width: 300px; */
     display:flex;
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    transition: 0.5s;
+    transition: 0.35s;
 }
 
 .card:hover{
-    background-color: rgba(0, 0, 0, 0.198);
-}
-
-h1{ 
-    font-size: 20px;
-    color: #303841;
-    /* margin-top: -15%; */
-    /* margin-bottom: 5rem; */
+    background-color: #135ba376;
 }
 
 h2{
     font-size: small;
     color:#3a4750;
+    margin:5px;
 }
 
 .card img {
-    /* max-width: 180px; */
-    /* width: auto;  */
-    width: 100%;
+    max-width: 200px;
+    width: auto; 
     border-radius: 12px 12px 0px 0px;
   }
 

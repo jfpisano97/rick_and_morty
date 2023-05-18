@@ -1,8 +1,8 @@
-import Cards from './components/Cards/Cards.jsx';
-import Nav from './components/Nav/Nav.jsx';
-import About from './components/About/About.jsx';
-import Detail from './components/Detail/Detail.jsx';
 import style from './App.module.css';
+import Nav from './components/Nav/Nav.jsx';
+import Cards from './views/Cards/Cards.jsx';
+import About from './views/About/About.jsx';
+import Detail from './views/Detail/Detail.jsx';
 import axios from 'axios';
 import {useState} from 'react';
 import {Route, Routes} from 'react-router-dom';
@@ -50,12 +50,11 @@ function App() {
       <div className={style.App}>
          <Nav onSearch={onSearch}/>
          <Routes>
-
             <Route path='/cards' element={<Cards characters={characters} onClose={onClose}/>} /> 
             
             <Route path='/about' element={<About />} />
 
-            <Route path='/detail/:id' element={<Detail />} />
+            <Route path='/cards/detail/:id' element={<Detail />} />
          
          </Routes>
       </div>

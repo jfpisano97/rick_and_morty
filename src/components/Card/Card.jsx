@@ -5,8 +5,8 @@ function Card({id, name, status, species, gender, origin, image, onClose}) {  //
    return (
       <div className={style.card}>
          <img src={image} alt='' />
-         <Link to={`/detail/${id}`} >
-            <h1>{name}</h1> 
+         <Link to={`/cards/detail/${id}`} >
+            <button>{name}</button> 
          </Link>
          <h2>{status}</h2>
          <h2>{species}</h2>

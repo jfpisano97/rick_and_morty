@@ -7,10 +7,10 @@ function Nav (props){
         <div className={style.nav}>
             <div className={style.logo}>Ricardo Mort</div>
             <Link to='/about'>
-                <button>About</button>
+                <button className={style.btns}>About</button>
             </Link>
             <Link to='/cards'>
-                <button>Home</button>
+                <button className={style.btns}>Home</button>
             </Link>
             <SearchBar onSearch={props.onSearch}/>
         </div>
