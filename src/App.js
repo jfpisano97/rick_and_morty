@@ -5,9 +5,9 @@ import About from './views/About/About.jsx';
 import Detail from './views/Detail/Detail.jsx';
 import Form from './views/Form/Form.jsx';
 import axios from 'axios';
-import {useState} from 'react';
+import { useState } from 'react';
 import { useEffect } from 'react';
-import {Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
@@ -24,7 +24,8 @@ function App() {
          setAccess(true);
          navigate('/cards');
       } else {
-         return alert('Email or password incorrect');
+         if (userData.email === '' || userData.password === '') return alert('Please enter an email and a password');
+         else return alert('Email or password incorrect');
       }
    }
 
@@ -32,6 +33,12 @@ function App() {
       !access && navigate('/');
    }, [access]);
 
+
+   // para probar el logout
+   function logout (){
+      setAccess(false);
+      // navigate('/');
+   }
 
 
    const location = useLocation();
@@ -77,7 +84,7 @@ function App() {
 
    return (
       <div className={style.App}>
-         {location.pathname !== '/' && <Nav onSearch={onSearch}/>}
+         {location.pathname !== '/' && <Nav logout={logout} onSearch={onSearch}/>}
          <Routes>
 
             <Route path='/' element={<Form login={login}/>} />

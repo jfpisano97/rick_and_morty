@@ -27,15 +27,19 @@ function Form ({login}){
     }
 
     return(
-        <form className={style.form} onSubmit={submitHandler}>
-            <div className={style.login}>
-                <label htmlFor='email'>Email</label><input type='text' name='email' value={userData.email} onChange={handleChange}></input>
+        <div className={style.login}>
+            <h3>LOGIN</h3>
+            <span>Enter your credentials</span>
+            <form className={style.form} onSubmit={submitHandler}>
+                {/* <label htmlFor='email'></label> */}
+                <input type='text' name='email' placeholder='Email address' value={userData.email} onChange={handleChange}></input>
                 <span>{errors.email}</span>
-                <label htmlFor='password'>Password</label><input type='text' name='password' value={userData.password} onChange={handleChange}></input>
+                {/* <label htmlFor='password'></label> */}
+                <input type='password' name='password' placeholder ='Password' value={userData.password} onChange={handleChange}></input>
                 <span>{errors.password}</span>
                 <button type='submit' onClick={handleSubmit}>Submit</button>
-            </div>
-        </form>
+            </form>
+        </div>
     )
 }
 
