@@ -14,7 +14,7 @@ function Card({id, name, status, species, gender, origin, image, onClose}) {  //
          <h2>{origin.name}</h2>
          <button className={style.closeButton} onClick={()=> onClose(id)}>CLOSE</button>
       </div>
-   );
+   )
 }
 
 export default Card;

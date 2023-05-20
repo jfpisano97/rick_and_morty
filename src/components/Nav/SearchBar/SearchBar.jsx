@@ -14,7 +14,7 @@ function SearchBar(props) {  // la función onSearch está en props, se pasa por
             <input className ={style.input} type='search' onChange={handleChange} /> 
             <button className={style.addButton} onClick={()=>{props.onSearch(id)}}>Add</button> 
          </div>
-   );
+   )
 
 
 }

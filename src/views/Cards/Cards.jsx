@@ -14,10 +14,10 @@ function Cards(props) { // acá van las props que se le pasan en App.js
             origin = {origin}
             image = {image}
             onClose = {props.onClose}
-         /> )
+         />)
       })}
    </div>
-   );
+   )
 } 
 
 export default Cards;

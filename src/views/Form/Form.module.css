@@ -1,0 +1,21 @@
+.login {
+    margin-block: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 70%
+}
+
+.form {
+    background-color: #135ba327;
+    display:flex;
+    /* flex-direction:row;   */
+    position:relative;
+    margin:auto;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    margin-top: 24px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-content:space-evenly;
+}
