@@ -1,5 +1,6 @@
 import style from './App.module.css';
 import Nav from './components/Nav/Nav.jsx';
+import Favorites from './views/Favorites/Favorites.jsx';
 import Cards from './views/Cards/Cards.jsx';
 import About from './views/About/About.jsx';
 import Detail from './views/Detail/Detail.jsx';
@@ -92,6 +93,8 @@ function App() {
             <Route path='/cards' element={<Cards characters={characters} onClose={onClose}/>} /> 
             
             <Route path='/about' element={<About />} />
+
+            <Route path='/favorites' element={<Favorites onClose={onClose}/>} />
 
             <Route path='/cards/detail/:id' element={<Detail />} />
          
