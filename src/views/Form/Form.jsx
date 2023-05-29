@@ -37,7 +37,7 @@ function Form ({login}){
                 {/* <label htmlFor='password'></label> */}
                 <input type='password' name='password' placeholder ='Password' value={userData.password} onChange={handleChange}></input>
                 <span>{errors.password}</span>
-                <button type='submit' onClick={handleSubmit}>Submit</button>
+                <button className={style.submitButton} type='submit' onClick={handleSubmit}>Submit</button>
             </form>
         </div>
     )

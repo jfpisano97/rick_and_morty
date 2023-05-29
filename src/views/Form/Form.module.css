@@ -27,20 +27,20 @@
     place-items: center;
 }
 
-h3 {
+.login h3 {
     color:aliceblue;
     /* margin-top: -15%; */
     /* margin-bottom: 8%; */
 }
 
-span {
+.login span {
     color:rgb(176, 175, 187);
     font-size: xx-small;
     padding-bottom: 7px;
     /* margin-bottom: 10%; */
 }
 
-button {
+.submitButton {
     width: 100px;
     position:relative;
     margin:auto;
