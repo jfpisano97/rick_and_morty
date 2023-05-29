@@ -32,7 +32,7 @@ function Form ({login}){
             <span>Enter your credentials</span>
             <form className={style.form} onSubmit={submitHandler}>
                 {/* <label htmlFor='email'></label> */}
-                <input type='text' name='email' placeholder='Email address' value={userData.email} onChange={handleChange}></input>
+                <input className={errors.email ? style.inputIncorrect : style.inputCorrect} type='text' name='email' placeholder='Email address' value={userData.email} onChange={handleChange}></input>
                 <span>{errors.email}</span>
                 {/* <label htmlFor='password'></label> */}
                 <input type='password' name='password' placeholder ='Password' value={userData.password} onChange={handleChange}></input>

@@ -8,6 +8,17 @@
     margin-top: 10%;
 }
 
+.inputCorrect {
+    background-color: rgba(51, 255, 0, 0.559);
+}
+
+.inputIncorrect {
+    /* border: 1px; */
+    border-color: rgb(255, 0, 0);
+    background-color: rgba(197, 30, 30, 0.537);
+    color:aliceblue;
+}
+
 .login {
     background-color: #0b2a57;
     border-radius: 17px;
