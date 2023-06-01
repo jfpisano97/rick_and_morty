@@ -4,7 +4,7 @@ import style from './Cards.module.css';
 function Cards(props) { // acá van las props que se le pasan en App.js
    return (
    <div className={style.cards}>
-      {props.characters.map(({id, name, status, species, gender, origin, image}) => {
+      {props.characters.length === 0 ? (<h2>Add your characters</h2>) : props.characters.map(({id, name, status, species, gender, origin, image}) => {
          return (<Card 
             id = {id}
             name = {name} // cada una de estas son las props que se le pasa a cada card, están en el módulo Card

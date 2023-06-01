@@ -43,7 +43,7 @@ function Favorites(props){
             </div>
             <div className={style.favs}>
                 
-                {props.myFavorites.map(({id, name, status, species, gender, origin, image}) => {
+                {props.myFavorites.length === 0 ? (<h2>Add your favorite characters</h2>) : props.myFavorites.map(({id, name, status, species, gender, origin, image}) => {
                     return (<Card 
                         id = {id}
                         name = {name}

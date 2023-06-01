@@ -16,10 +16,15 @@
 }
 
 .card:hover{
-    background-color: #135ba376;
+    background-color: #135ba360;
 }
 
-h2{
+.card h3{
+    color: rgba(0, 0, 0, 0.683);
+    /* margin-top: -5px; */
+}
+
+.card h2{
     font-size: small;
     color:#3a4750;
     margin:5px;
