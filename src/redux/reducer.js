@@ -8,10 +8,11 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
     switch (action.type){
         case ADD_FAV:
+            
             return {
                 ...state, 
                 myFavorites:[...state.myFavorites, action.payload],
-                allCharacters:[...state.myFavorites, action.payload],
+                allCharacters: [...state.myFavorites, action.payload]
             };
         case REMOVE_FAV:
             return {
@@ -19,21 +20,34 @@ const rootReducer = (state = initialState, action) => {
                 myFavorites: state.myFavorites.filter(
                     (char) => char.id !== parseInt(action.payload)
                 ),
+                allCharacters: state.allCharacters.filter(
+                    (char) => char.id !== parseInt(action.payload)
+                ),
             };
         case FILTER:
+            const totalCharacters = state.allCharacters;
+            const charGender = action.payload === 'All' ? totalCharacters : totalCharacters.filter(char => char.gender === action.payload);
+            
             return {
                 ...state,
-                allCharacters: state.allCharacters.filter(
-                    (char) => char.gender === action.payload
-                ),
-                myFavorites: state.allCharacters,
+                allCharacters: totalCharacters,
+                myFavorites: charGender,
             }
-        case ORDER:
+        case ORDER: 
+
+            let order = null;
+
+            if (action.payload === 'A') {
+                order = state.myFavorites.sort((a, b) => a.id - b.id);
+            }
+            if (action.payload === 'D') {
+                order = state.myFavorites.sort((a, b) => b.id - a.id);
+            }
+
             return {
                 ...state,
-                allCharacters: action.payload === 'A' ? state.allCharacters.sort() : state.allCharacters.sort((a, b) => b - a),
-                myFavorites: state.allCharacters,
-            }
+                myFavorites: order,
+            } 
         default: return {...state};
     }
 };

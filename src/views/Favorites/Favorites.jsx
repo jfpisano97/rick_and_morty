@@ -9,20 +9,27 @@ import { useState } from 'react';
 function Favorites(props){
     
     const dispatch = useDispatch();
+    const [aux, setAux] = useState(false);
+    const [orderValue, setOrderValue] = useState('Default');
+
     const handleOrder = (event) => {
-        dispatch(orderCards(event.target.value))
-        setAux(true);
+        event.preventDefault()
+        dispatch(orderCards(event.target.value));
+        setOrderValue(event.target.value);
+        if (aux === false) setAux(true);
+        else setAux (false);
     };
     const handleFilter = (event) => {
+        event.preventDefault()
         dispatch(filterCards(event.target.value))
     };
 
-    const [aux, setAux] = useState(false);
 
     return(
         <div>
-            <div>
-                <select onChange={handleOrder}>
+            <div className={style.selection}>
+                <select value={orderValue} onChange={handleOrder}>
+                    <option disabled value='Default'>...</option>
                     <option value='A'>Ascendent order</option>
                     <option value='D'>Descendent order</option>
                 </select>

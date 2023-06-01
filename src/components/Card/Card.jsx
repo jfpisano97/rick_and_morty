@@ -35,10 +35,10 @@ function Card(props) {
 
    return (
       <div className={style.card}>
-         <img src={props.image} alt='' />
          <Link to={`/cards/detail/${props.id}`} >
-            <button>{props.name}</button> 
+            <img src={props.image} alt='' />
          </Link>
+         <h3>{props.name}</h3> 
          <h2>{props.status}</h2>
          <h2>{props.species}</h2>
          <h2>{props.gender}</h2>
