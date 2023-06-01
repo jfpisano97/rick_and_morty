@@ -59,16 +59,6 @@ function App() {
             } else {
             window.alert('¡No hay personajes con este ID!');
          };
-         // if (data.name) {
-         //    const characterExists = characters.find((character) => character.id === data.id);
-         //    if (characterExists) {
-         //      window.alert('Repetido');
-         //    } else {
-         //      setCharacters((oldChars) => [...oldChars, data]);
-         //    }
-         //  } else {
-         //    window.alert('¡No hay personajes con este ID!');
-         //  }
       });
    };
 
