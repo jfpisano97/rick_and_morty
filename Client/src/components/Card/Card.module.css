@@ -1,0 +1,78 @@
+.card{
+    background-color: #135ba33e;
+    margin-inline: 8px;
+    margin-block: 8px;
+    border-radius: 12px;
+    padding-bottom: 8px;
+    height: auto;
+    width: fit-content;
+    /* height: 400px;
+    width: 300px; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.35s;
+}
+
+.card:hover{
+    background-color: #135ba360;
+}
+
+.card h3{
+    color: rgba(0, 0, 0, 0.683);
+    /* margin-top: -5px; */
+}
+
+.card h2{
+    font-size: small;
+    color:#3a4750;
+    margin:5px;
+}
+
+.card img {
+    max-width: 200px;
+    width: auto; 
+    border-radius: 12px 12px 0px 0px;
+}
+
+.closeButton{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    color:#3a4750;
+    border-radius: 4px;
+    font-weight: 900;
+    /* width: 15%; */
+    /* height: 6%; */
+    /* width: fit-content; */
+    /* height: fit-content; */
+    width:fit-content;
+    height: auto;
+    font-size: 9px;
+    padding: 3px;
+    padding-inline: 6px;
+    transition: 0.5s;
+}
+
+.closeButton:hover{
+    color:red;
+    text-shadow: 0px 0px 6px rgb(29, 21, 101);
+}
+
+
+.favButton {
+    margin: 2px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    transition: 0.5s;
+}
+
+.favButton:hover {
+    text-shadow: 0px 0px 6px rgb(29, 21, 101);
+}
+
+.favAndClose{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
