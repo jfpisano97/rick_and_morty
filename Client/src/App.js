@@ -43,19 +43,20 @@ function App() {
 
 
    const location = useLocation();
-   const [characters,setCharacters] = useState([]);
+   const [characters, setCharacters] = useState([]);
 
 
 
    function onSearch(id) {
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {   
+      axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {   
          if (data.name) {
             for (let i=0; i < characters.length; i++){
                if (characters[i].id === data.id){
-                  return window.alert('Repetido');
+                  return window.alert('Repeated');
                }
             }
-            setCharacters((oldChars) => [...oldChars, data]);
+            // setCharacters((oldChars) => [...oldChars, data]);
+            setCharacters([...characters, data]);
             } else {
             window.alert('¡No hay personajes con este ID!');
          };
